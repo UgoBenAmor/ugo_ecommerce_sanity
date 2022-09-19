@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { urlFor } from '../Lib/client';
-import Image from 'next/image';
+import Image from 'next/image'
 
 
 
@@ -13,7 +13,13 @@ const HeroBanner = ({heroBanner}) => {
       </div>
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
-        <Image src={urlFor(heroBanner.image)} alt="earring"  className='hero-banner-image'/>
+        
+         <img src={urlFor(heroBanner.image)}
+              alt="earring"  
+              className='hero-banner-image'
+              width={250}
+              height={250}/>)
+            
 
     <div>
       {/* <Link href={`/product/${heroBanner.product}`}>

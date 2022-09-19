@@ -3,7 +3,7 @@ import {client, urlFor} from '../../Lib/client'
 import {AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar} from 'react-icons/ai'
 import {Product} from '../../components'
 import {useStateContext} from '../../context/StateContext'
-import Image from 'next/image' 
+
 
 const ProductDetails = ({product, products}) => {
     const {image, name, details, price} = product;
@@ -20,11 +20,11 @@ const ProductDetails = ({product, products}) => {
         <div className='product-detail-container'>
             <div>
                 <div className='image-container'>
-                    <Image src={urlFor(image && image[index]).width(350)} alt="image" className='product-detail-image'/>
+                    <img src={urlFor(image && image[index]).width(350)} alt="image" className='product-detail-image'/>
                 </div>
                 <div className='small-images-container'>
                     {image?.map((item, i)=>(
-                    <Image src={urlFor(item)}
+                    <img src={urlFor(item)}
                          key={i}
                          alt="image"
                          className={i === index ? 'small-image selected-image': 'small-image'}
@@ -60,8 +60,8 @@ const ProductDetails = ({product, products}) => {
                     </p>
                 </div>
                 <div className='buttons'>
-                    <button typeof='button'className='add-to-cart'onClick={()=>onAdd(product,qty)}>Add to cart</button>
-                    <button typeof='button'className='buy-now'onClick={handleBuyNow}>Buy now</button>
+                    <button type='button'className='add-to-cart'onClick={()=>onAdd(product,qty)}>Add to cart</button>
+                    <button type='button'className='buy-now'onClick={handleBuyNow}>Buy now</button>
                 </div>
             </div>
         </div>
