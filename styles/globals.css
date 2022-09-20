@@ -448,8 +448,8 @@
  .product-detail-image{
    border-radius: 15px;
     background-color: #ebebeb;
-   width: 400px;
-   height: 400px;
+   width: 350px;
+   height: 350px;
    cursor: pointer;
    transition: .3s ease-in-out;
  }
@@ -554,11 +554,11 @@
    cursor: pointer;
  }
  .quantity-desc .minus{
-   border-right: 1px solid gray;
+   
    color: #f02d34;
  }
  .quantity-desc .num{
-   border-right: 1px solid gray;
+   border: 1px solid gray;
    font-size: 20px;
  }
  .quantity-desc .plus{

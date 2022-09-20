@@ -22,8 +22,6 @@ const HeroBanner = ({heroBanner}) => {
               height={350}
               objectFit="cover"
               className='hero-banner-image'
-              loading="eager" 
-              priority={true}
               />
 
         </div>
@@ -31,9 +29,9 @@ const HeroBanner = ({heroBanner}) => {
             
 
     <div>
-      {/* <Link href={`/product/${heroBanner.product}`}>
+      <Link href={`/product/${heroBanner.product}`}>
         <button type="button">{heroBanner.buttonText}</button>
-      </Link> */}
+      </Link>
         <div className='desc'>
           <h5>Description</h5>
           <p>{heroBanner.desc}</p>
