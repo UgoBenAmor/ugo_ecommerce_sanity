@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../Lib/client'
+import Image from 'next/image'
 
 
 const Product = ({product: {image, name, slug, price}}) => {
@@ -8,10 +9,11 @@ const Product = ({product: {image, name, slug, price}}) => {
     <div>
       <Link href={`/product/${slug.current}`}>
         <div className='product-card'>
-            <img src={urlFor(image && image[0])} alt="image" 
+            <Image src={urlFor(image && image[0]).url()} alt="image" 
                   width={250}
                   height={250}
-                  className ="product-image"/>
+                  className ="product-image"
+                  />
                   <p className='product-name'>{name}</p>
                   <p className='product-price'>${price}</p>
         </div>

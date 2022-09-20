@@ -171,10 +171,8 @@
  }
  .hero-banner-image{
    position: absolute;
-   top: 0%;
+   top: 10%;
    right:25%;
-   width: 400px;
-   height: 400px;
    z-index: 1;
    border-radius: 15px;
  }
